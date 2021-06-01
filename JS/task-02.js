@@ -1,19 +1,17 @@
-// Функция checkPassword получает пароль пользователя в параметр password, проверяет его на совпадение с паролем администратора в переменной ADMIN_PASSWORD и возвращает сообщение о результате сравнения.
+// Дополни объект квартиры свойством owner, значением которого будет объект с информацией о владельце. Добавь ему следующие свойства:
 
-// Проведи рефакторинг кода функции checkStorage используя паттерн «ранний возврат»:
-
-// удали переменную message
-// удали else
-// код должен работать так же, как и до оптимизации
-function checkPassword(password) {
-    const ADMIN_PASSWORD = "jqueryismyjam";
-    // Change code below this line
-  
-    if (password === ADMIN_PASSWORD) {
-        return "Welcome!"; 
-    } 
-    return "Access denied, wrong password!";
-    
-    // Change code above this line
-  }
-  
+// name - имя владельца, значение "Henry";
+// phone - телефон, значение "982-126-1588";
+// email - почта, значение "henry.carter@aptmail.com".
+const apartment = {
+    imgUrl: 'https://via.placeholder.com/640x480',
+    descr: 'Spacious apartment in the city center',
+    rating: 4,
+    price: 2153,
+    tags: ['premium', 'promoted', 'top'],
+    owner: {
+        name: "Henry",
+        phone: "982-126-1588",
+        email: "henry.carter@aptmail.com",
+    },
+  };

@@ -1,9 +1,20 @@
-// // Объяви три переменные и присвой каждой из них значение, используя нотацию квадратных скобок.
-// Имя переменной	Значение переменной
-// firstElement	первый элемент массива
-// secondElement	второй элемент массива
-// lastElement	последний элемент массива
-const fruits = ["apple", "plum", "pear", "orange"];
-const firstElement = fruits[0];
-const secondElement = fruits[1];
-const lastElement = fruits[3]; 
+// Дополни код присвоив объявленным переменным выражения обращения к соответствующим свойствам обьекта apartment используя синтаксис «квадратных скобок».
+
+// aptRating - рейтинг;
+// aptDescr - описание;
+// aptPrice - цена;
+// aptTags - теги.
+const apartment = {
+    imgUrl: "https://via.placeholder.com/640x480",
+    descr: "Spacious apartment in the city center",
+    rating: 4,
+    price: 2153,
+    tags: ["premium", "promoted", "top"],
+  };
+  
+  // Change code below this line
+  const aptRating = apartment["rating"];
+  const aptDescr = apartment["descr"];
+  const aptPrice = apartment["price"];
+  const aptTags = apartment["tags"];
+  // Change code above this line

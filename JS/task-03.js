@@ -1,18 +1,20 @@
-// Функция checkStorage проверяет возможность оформления заказа и возвращает сообщение о результате. Она принимает два параметра, значения которых будут задаваться во время её вызова.
+// Дополни код присвоив объявленным переменным выражения обращения к соответствующим свойствам обьекта apartment.
 
-// available - доступное количество товаров на складе
-// ordered - количество единиц товара в заказе
-// Проведи рефакторинг кода функции checkStorage используя паттерн «ранний возврат».
-function checkStorage(available, ordered) {
-    // Change code below this line 
-    
-    if (ordered === 0) {
-      return "Your order is empty!";
-    }
-    if (ordered > available) {
-      return "Your order is too large, not enough goods in stock!";
-    } 
-    return "The order is accepted, our manager will contact you";
-   
-    // Change code above this line
-  }
+// aptRating - рейтинг;
+// aptDescr - описание;
+// aptPrice - цена;
+// aptTags - теги.
+const apartment = {
+  imgUrl: "https://via.placeholder.com/640x480",
+  descr: "Spacious apartment in the city center",
+  rating: 4,
+  price: 2153,
+  tags: ["premium", "promoted", "top"],
+};
+
+// Change code below this line
+const aptRating = apartment.rating;
+const aptDescr = apartment.descr;
+const aptPrice = apartment.price;
+const aptTags = apartment.tags;
+// Change code above this line
