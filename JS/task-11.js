@@ -1,16 +1,19 @@
-// Сервису гравировки украшений нужна функция, которая бы автоматически считала цену гравировки, в зависимости от количества слов и цены за слово.
+// Выполни рефакторинг решения предыдущего задания добавив в цикл for...in проверку на собственное свойство.
+const keys = [];
+const values = [];
+const advert = {
+  service: "apt",
+};
+const apartment = Object.create(advert);
+apartment.descr = "Spacious apartment in the city center";
+apartment.rating = 4;
+apartment.price = 2153;
 
-// Объявлена функция calculateEngravingPrice(message, pricePerWord). Эта функция принимает строку, состоящую из слов разделённых только пробелами (параметр message) и цену гравировки одного слова (параметр pricePerWord).
-
-// Напиши тело функции, чтобы она возвращала общую стоимость гравировки всех слов в строке.
-function calculateEngravingPrice(message, pricePerWord) {
+for (const key in apartment) {
   // Change code below this line
-  let count = 1;
-  for (const character of message){
-    if (character === ' '){
-      count += 1;
-    }
+  if (apartment.hasOwnProperty(key)) {
+    keys.push(key);
+    values.push(apartment[key]);
   }
-  return count * pricePerWord;
   // Change code above this line
 }

@@ -1,5 +1,9 @@
-// Дополни код так, чтобы в переменной allClients получился массив всех элементов массивов oldClients и newClients.
-const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
-const newClients = ['Peach', 'Houston'];
-
-const allClients = oldClients.concat(newClients); // Change this line
+// Запиши в переменную keys массив ключей собственных свойств объекта apartment, а в переменную values массив всех значений его свойств. Используй методы Object.keys() и Object.values().
+const apartment = {
+    descr: "Spacious apartment in the city center",
+    rating: 4,
+    price: 2153,
+  };
+  // Change code below this line
+  const keys = Object.keys(apartment);
+  const values = Object.values(apartment);

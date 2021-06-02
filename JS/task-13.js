@@ -1,19 +1,13 @@
-// Термин slug - это человеко-понятный уникальный идентификатор, который используется в веб-разработке для создания читабельных URL-адесов.
+// Перебери объект apartment используя метод Object.keys() и цикл for...of. Запиши в переменную keys массив ключей собственных свойств объекта apartment, и добавь в массив values все значения его свойств.
+const apartment = {
+  descr: "Spacious apartment in the city center",
+  rating: 4,
+  price: 2153,
+};
+const values = [];
+// Change code below this line
+const keys = Object.keys(apartment);
 
-// Например, вместо того чтобы пользователь увидел в адресной строке mysite.com/posts/1q8fh74tx, можно сделать slug из названия статьи. В результате адрес получится более приятным для восприятия: mysite.com/posts/arrays-for-begginers.
-
-// Внимание
-// Slug это всегда строка в нижнем регистре, слова которой разделены тире.
-
-// Напиши функцию slugify(title) которая принимает заголовок статьи, параметр title, и возвращает slug, созданный из этой строки.
-
-// Значением параметра title будут строки, слова которых разделены только пробелами
-// Все символы slug должны быть в нижнем регистре
-// Все слова slug должна быть разделены тире
-function slugify(title) {
-  // Change code below this line
-  title = title.toLowerCase();
-  const arr = title.split(' ');
-  return arr.join('-');
-  // Change code above this line
+for (const key of keys) {
+  values.push(apartment[key]);
 }
