@@ -1,18 +1,10 @@
-// Выполни рефакторинг функции findNumber(start, end, divisor) так, чтобы она:
-
-// возвращала первое число от start до end, которое делится на divisor без остатка
-// не использовала оператор break
-// не использовала переменную number
-function findNumber(start, end, divisor) {
-    // Change code below this line
-  
-    for (let i = start; i < end; i += 1) {
-      if (i % divisor === 0) {
-        return i;
-      }
-    }
-  
-    //return number;
-    // Change code above this line
+// Используя операцию rest дополни код функции add() так, чтобы она принимала любое количество аргументов, считала и возвращала их сумму.
+// Change code below this line
+function add(...args) {
+  sum = 0;
+  for(arg of args){
+    sum += arg;
   }
-  
+  return sum;
+  // Change code above this line
+}

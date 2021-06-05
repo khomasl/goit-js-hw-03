@@ -1,18 +1,16 @@
-// Напиши функцию findLongestWord(string) которая принимает произвольную строку состоящую только из слов разделённых пробелом (параметр string) и возвращает самое длинное слово в этой строке.
-function findLongestWord(string) {
-  // Change code below this line
-  const arr = string.split(' ');
-  let maxLength = arr[0].length;
-  let word = arr[0];
-  for (let i = 1; i < arr.length; i += 1){
-    const len = arr[i].length;
-    if (len < maxLength){
-      continue
-    }
-    
-    maxLength = len;
-    word = arr[i];
-  }
-  return word;
-  // Change code above this line
-}
+// Пришел трёхдневный прогноз максимальных температур и мы считаем среднюю температуру за три дня (meanTemperature). Замени объявления переменных yesterday, today и tomorrow одной операцией деструктуризации свойств объекта highTemperatures.
+const highTemperatures = {
+  yesterday: 28,
+  today: 26,
+  tomorrow: 33,
+};
+// Change code below this line
+
+// const yesterday = highTemperatures.yesterday;
+// const today = highTemperatures.today;
+// const tomorrow = highTemperatures.tomorrow;
+
+const {yesterday, today, tomorrow} = highTemperatures;
+
+// Change code above this line
+const meanTemperature = (yesterday + today + tomorrow) / 3;

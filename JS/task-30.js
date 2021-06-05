@@ -1,11 +1,17 @@
-// Дополни код так, чтобы в переменную number записывалось первое число от start до end, которое делится на 5 без остатка.
-const start = 6;
-const end = 27;
-let number;
+// Напиши функцию makeTask(data) которая принимает один параметр data - объект со следующими свойствами.
 
-for (let i = start; i < end; i += 1) {
-  if (i % 5 === 0) {
-    number = i;
-    break;
-  }
+// text - текст задачи.
+// category - категория задачи.
+// priority - приоритет задачи.
+// Функция должна составить и вернуть новый объект задачи, не изменяя напрямую параметр data. В новом объекте должно быть свойство completed, значение которого хранится в одноимённой локальной переменной.
+
+// В параметре data гарантированно будет только свойство text, а остальные два, category и priority, могут отсутствовать. Тогда, в новом объекте задачи, в свойствах category и priority должны быть значения по умолчанию, хранящиеся в одноимённых локальных переменных.
+
+function makeTask(data) {
+  const completed = false;
+  const category = 'General';
+  const priority = 'Normal';
+  // Change code below this line
+  return {completed, category, priority,...data};
+  // Change code above this line
 }

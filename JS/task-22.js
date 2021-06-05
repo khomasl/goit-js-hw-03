@@ -1,10 +1,21 @@
-// Дополни код функции createArrayOfNumbers(min, max) так, чтобы она возвращала массив всех целых чисел от значения min до max.
-function createArrayOfNumbers(min, max) {
-  const numbers = [];
-  // Change code below this line
-  for (let i = min; i <= max; i += 1) {
-    numbers.push(i);
-  }
-  // Change code above this line
-  return numbers;
-}
+// В прогнозе максимальных температур также может быть необязательное свойство icon - иконка погоды. Замени объявления переменных yesterday, today, tomorrow и icon одной операцией деструктуризации свойств объекта highTemperatures. Задай значение по умолчанию для icon - строку "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"
+const highTemperatures = {
+  yesterday: 28,
+  today: 26,
+  tomorrow: 33,
+};
+// Change code below this line
+// const yesterday = highTemperatures.yesterday;
+// const today = highTemperatures.today;
+// const tomorrow = highTemperatures.tomorrow;
+
+const {
+  yesterday, 
+  today, 
+  tomorrow,
+  icon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"
+} = highTemperatures;
+
+
+// Change code above this line
+const meanTemperature = (yesterday + today + tomorrow) / 3;

@@ -1,15 +1,16 @@
-// Напиши функцию includes(array, value), которая делает тоже самое, что и метод массива массив.includes(значение) - проверяет, есть ли в массиве array значение value, возвращая true если есть и false в противном случае.
-
-// При выполнении этой задачи в теле функции includes() нельзя использовать метод массив.includes(значение).
-function includes(array, value) {
-    // Change code below this line
-    flag = false;
-    for (const element of array){
-        if (element === value){
-            flag = true;
-            break;
-        }
+// Функция addOverNum() считает сумму всех аргументов. Измени параметры и тело функции addOverNum() так, чтобы она считала сумму только тех аргументов, которые больше чем заданное число. Это число должно быть первым параметром функции.
+// Change code below this line
+function addOverNum(...args) {
+    let total = 0;
+    num = args[0];
+    len = args.length;
+    for (let i = 1; i <= len; i += 1) {
+      if (args[i] > num){
+        total += args[i];
+      }  
     }
-    return flag;
+  
+    return total;
     // Change code above this line
   }
+  

@@ -1,11 +1,20 @@
-// Функция checkFruit(fruit) принимает строку с названием фрукта (параметр fruit), и проверяет есть ли такой фрукт в массиве fruits.
+// Выполни рефакторинг цикла for...of так, чтобы в нём использовалась деструктуризация объекта..
+const colors = [
+  { hex: '#f44336', rgb: '244,67,54' },
+  { hex: '#2196f3', rgb: '33,150,243' },
+  { hex: '#4caf50', rgb: '76,175,80' },
+  { hex: '#ffeb3b', rgb: '255,235,59' },
+];
 
-// Дополни код функции так, что если:
+const hexColors = [];
+const rgbColors = [];
+// Change code below this line
 
-// фрукт есть в массиве, то функция возвращает true;
-// фрукта нет в массиве, то функция возвращает false.
-function checkFruit(fruit) {
-    const fruits = ["apple", "plum", "pear", "orange"];
-    return fruits.includes(fruit); // Change this line
-  }
-  
+// for (const color of colors) {
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
+// }
+for (const {hex, rgb} of colors) {
+  hexColors.push(hex);
+  rgbColors.push(rgb);
+}

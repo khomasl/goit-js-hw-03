@@ -27,5 +27,5 @@ function getProductPrice(productName) {
   // Change code above this line
 }
 
-console.log('object :>> ', getProductPrice(
-'Scanner'));
+// console.log('object :>> ', getProductPrice(
+// 'Scanner'));

@@ -1,13 +1,22 @@
-// Напиши функцию filterArray(numbers, value), которая принимает массив чисел (параметр numbers) и возвращает новый массив, в котором будут только те элементы массива numbers, которые больше чем значение параметра value (число).
-function filterArray(numbers, value) {
-  // Change code below this line
-  const newArray = [];
-  for (const number of numbers){
-    if (number <= value){
-      continue
-    }
-    newArray.push(number);
-  }
-  return newArray;
- // Change code above this line
-}
+// Замени объявления переменных highYesterday, highToday, highTomorrow и highIcon одной операцией деструктуризации свойств объекта highTemperatures. Задай значение по умолчанию для highIcon - строку "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"
+const highTemperatures = {
+  yesterday: 28,
+  today: 26,
+  tomorrow: 33,
+};
+// Change code below this line
+
+// const highYesterday = highTemperatures.yesterday;
+// const highToday = highTemperatures.today;
+// const highTomorrow = highTemperatures.tomorrow;
+// const highIcon = highTemperatures.icon;
+const {
+  yesterday: highYesterday, 
+  today: highToday, 
+  tomorrow: highTomorrow,
+  icon: highIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"
+} = highTemperatures;
+
+
+// Change code above this line
+const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
