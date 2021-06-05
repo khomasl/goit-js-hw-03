@@ -75,6 +75,7 @@ const atTheOldToad = {
         //     name: potionName,
         //     price: 780
         // }; 
+
         let potionIndex = -1;
         const pts = this.potions;
         for (let i = 0; i<= pts.length; i += 1){
@@ -83,11 +84,12 @@ const atTheOldToad = {
                 break;
             }
         }
+
         // console.log('potion :>> ', this.potions.includes({name: 'Dragon breath', price: 780}));
-        // if (this.potions.includes({name: potionName})) {
-        //     console.log(`Potion ${potionName} is already equipped!`);
+        // if (this.potions.includes({name: "Dragon breath", price: 780})) {
+        //     console.log(`Potion ${potionName} есть`);
         //   }
-        // const potionIndex = this.potions.indexOf({name: potionName});
+        // const potionIndex = this.potions.indexOf(potionName);
         // console.log('potionIndex :>> ', potionIndex);
         
       if (potionIndex === -1) {
@@ -121,7 +123,7 @@ const atTheOldToad = {
     // Change code above this line
   };
 
-  console.log('add :>> ', atTheOldToad.addPotion({ name: 'Speed potion', price: 460 }));
-  //console.log('remove :>> ', atTheOldToad.removePotion('Dragon breath'));
-  console.log('uppd', atTheOldToad.updatePotionName('Dragon breath', 'Polymorth'));
+  //console.log('add :>> ', atTheOldToad.addPotion({ name: 'Speed potion', price: 460 }));
+  console.log('remove :>> ', atTheOldToad.removePotion('Dragon breath'));
+//   console.log('uppd', atTheOldToad.updatePotionName('Dragon breath', 'Polymorth'));
   console.log('get :>> ', atTheOldToad.getPotions());
